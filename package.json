@@ -1,0 +1,39 @@
+{
+  "name": "xcross",
+  "version": "0.0.1",
+  "description": "Provides the standard [Web Crypto API](https://www.w3.org/TR/WebCryptoAPI/) for NodeJS and Browser",
+  "type": "module",
+  "main": "index.cjs",
+  "types": "index.d.ts",
+  "module": "index.js",
+  "sideEffects": false,
+  "exports": {
+    "node": "./index.js",
+    "default": "./browser.js"
+  },
+  "files": [
+    "browser.js",
+    "index.js",
+    "index.cjs",
+    "index.d.ts"
+  ],
+  "scripts": {
+    "test": "node test.js && node test.cjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/3axap4eHko/subtlecrypto.git"
+  },
+  "funding": "https://github.com/sponsors/3axap4eHko",
+  "author": {
+    "name": "Ivan Zakharchanka",
+    "email": "3axap4eHko@gmail.com",
+    "url": "https://linkedin.com/in/3axap4eHko"
+  },
+  "keywords": [],
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/3axap4eHko/subtlecrypto/issues"
+  },
+  "homepage": "https://github.com/3axap4eHko/subtlecrypto#readme"
+}
