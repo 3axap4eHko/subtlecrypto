@@ -1,4 +1,4 @@
-# wcrypto
+# X-Cross
 
 Provides the standard [Web Crypto API](https://www.w3.org/TR/WebCryptoAPI/) for NodeJS and Browser
 

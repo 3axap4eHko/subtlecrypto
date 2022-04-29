@@ -3,22 +3,31 @@
   "version": "0.0.1-rc1",
   "description": "Provides the standard [Web Crypto API](https://www.w3.org/TR/WebCryptoAPI/) for NodeJS and Browser",
   "type": "module",
-  "main": "index.cjs",
+  "main": "build/index.cjs",
+  "module": "build/index.js",
   "types": "index.d.ts",
-  "module": "index.js",
   "sideEffects": false,
   "exports": {
-    "node": "./index.js",
-    "default": "./browser.js"
+    "node": "./build/index.js",
+    "import": "./build/index.js",
+    "require": "./build/index.cjs",
+    "default": "./build/browser.js"
   },
   "files": [
-    "browser.js",
-    "index.js",
-    "index.cjs",
+    "build",
     "index.d.ts"
   ],
   "scripts": {
-    "test": "node test.js && node test.cjs"
+    "convert-cjs": "node scripts/convert-cjs.js",
+    "build": "rm -rf build && yarn build:swc:cjs && yarn build:swc:mjs",
+    "build:swc:cjs": "swc ./src -d build --config-file .cjs.swcrc && yarn convert-cjs",
+    "build:swc:mjs": "swc ./src -d build --config-file .mjs.swcrc",
+    "build:ts:cjs": "tsc -p tsconfig.cjs.json && yarn convert-cjs",
+    "build:ts:mjs": "tsc -p tsconfig.mjs.json --declaration",
+    "test": "jest"
+  },
+  "engines": {
+    "node": ">=15"
   },
   "repository": {
     "type": "git",
@@ -35,5 +44,10 @@
   "bugs": {
     "url": "https://github.com/3axap4eHko/subtlecrypto/issues"
   },
-  "homepage": "https://github.com/3axap4eHko/subtlecrypto#readme"
+  "homepage": "https://github.com/3axap4eHko/subtlecrypto#readme",
+  "devDependencies": {
+    "@swc/cli": "^0.1.57",
+    "@swc/core": "^1.2.173",
+    "glob": "^8.0.1"
+  }
 }
