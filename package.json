@@ -3,14 +3,10 @@
   "version": "0.0.1-rc3",
   "description": "Provides the standard [Web Crypto API](https://www.w3.org/TR/WebCryptoAPI/) for NodeJS and Browser since both support it natively.",
   "type": "module",
-  "main": "build/index.cjs",
-  "module": "build/index.js",
   "types": "index.d.ts",
   "sideEffects": false,
   "exports": {
     "node": "./build/index.js",
-    "import": "./build/index.js",
-    "require": "./build/index.cjs",
     "default": "./build/browser.js"
   },
   "files": [
