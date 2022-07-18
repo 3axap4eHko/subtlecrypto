@@ -32,6 +32,6 @@ License [Apache-2.0](http://www.apache.org/licenses/LICENSE-2.0)
 Copyright (c) 2022-present Ivan Zakharchanka
 
 
-[npm-url]: https://www.npmjs.com/package/subtlecrypto
-[downloads-image]: https://img.shields.io/npm/dw/subtlecrypto.svg?maxAge=43200
-[npm-image]: https://img.shields.io/npm/v/subtlecrypto.svg?maxAge=43200
+[npm-url]: https://www.npmjs.com/package/xcross
+[downloads-image]: https://img.shields.io/npm/dw/xcross.svg?maxAge=43200
+[npm-image]: https://img.shields.io/npm/v/xcross.svg?maxAge=43200
