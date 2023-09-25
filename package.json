@@ -6,24 +6,25 @@
   "types": "index.d.ts",
   "sideEffects": false,
   "exports": {
-    "node": "./build/index.js",
-    "default": "./build/browser.js"
+    "node": {
+      "import": "./browser.js",
+      "require": "./browser.cjs"
+    },
+    "default": {
+      "import": "./node.js",
+      "require": "./node.cjs"
+    }
   },
   "files": [
     "build",
     "index.d.ts"
   ],
   "scripts": {
-    "convert-cjs": "node scripts/convert-cjs.js",
-    "build": "rm -rf build && yarn build:swc:cjs && yarn build:swc:mjs",
-    "build:swc:cjs": "swc ./src -d build --config-file .cjs.swcrc && yarn convert-cjs",
-    "build:swc:mjs": "swc ./src -d build --config-file .mjs.swcrc",
-    "build:ts:cjs": "tsc -p tsconfig.cjs.json && yarn convert-cjs",
-    "build:ts:mjs": "tsc -p tsconfig.mjs.json --declaration",
+    "build": "rm -rf build && inop src build -i __tests__ -i *.tmp.ts",
     "test": "jest"
   },
   "engines": {
-    "node": ">=15"
+    "node": ">=18"
   },
   "repository": {
     "type": "git",
@@ -72,8 +73,10 @@
   },
   "homepage": "https://github.com/3axap4eHko/subtlecrypto#readme",
   "devDependencies": {
-    "@swc/cli": "^0.1.57",
-    "@swc/core": "^1.2.173",
-    "glob": "^8.0.1"
+    "@swc/cli": "^0.1.62",
+    "@swc/core": "^1.3.88",
+    "glob": "^10.3.7",
+    "inop": "^0.4.2",
+    "typescript": "^5.2.2"
   }
 }

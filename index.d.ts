@@ -1,1 +1,1 @@
-export const subtle: SubtleCrypto;
+export declare const subtle: SubtleCrypto;

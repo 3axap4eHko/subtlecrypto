@@ -18,18 +18,12 @@ const sha256 = async (input: string) => {
 
   return hashArray.map((b) => b.toString(16).padStart(int32.BYTES_PER_ELEMENT * 2, '0')).join('');
 };
-
 ```
-
-
-[![Build Status][github-image]][github-url]
-[![NPM version][npm-image]][npm-url]
-[![Downloads][downloads-image]][npm-url]
 
 ## License
 
 License [Apache-2.0](http://www.apache.org/licenses/LICENSE-2.0)
-Copyright (c) 2022-present Ivan Zakharchanka
+Copyright (c) 2023-present Ivan Zakharchanka
 
 
 [npm-url]: https://www.npmjs.com/package/xcross
