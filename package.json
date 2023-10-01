@@ -1,6 +1,6 @@
 {
   "name": "xcross",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Provides the standard [Web Crypto API](https://www.w3.org/TR/WebCryptoAPI/) for NodeJS and Browser since both support it natively.",
   "type": "module",
   "types": "index.d.ts",
