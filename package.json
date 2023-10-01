@@ -7,12 +7,12 @@
   "sideEffects": false,
   "exports": {
     "node": {
-      "import": "./browser.js",
-      "require": "./browser.cjs"
+      "import": "./build/node.js",
+      "require": "./build/node.cjs"
     },
     "default": {
-      "import": "./node.js",
-      "require": "./node.cjs"
+      "import": "./build/browser.js",
+      "require": "./build/browser.cjs"
     }
   },
   "files": [
